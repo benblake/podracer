@@ -1,9 +1,9 @@
-package basic.leagues.wood.one;
+package basic.leagues.wood.two;
 
 import basic.leagues.Movement;
 import basic.leagues.PodRacer;
 
-public class WoodLeagueOneRacer implements PodRacer {
+public class WoodLeagueTwoRacer implements PodRacer {
     private Movement movement = new Movement();
 
     @Override
@@ -17,13 +17,12 @@ public class WoodLeagueOneRacer implements PodRacer {
             int opponentX,
             int opponentY
     ) {
+
         movement.directionX = nextCheckpointX;
         movement.directionY = nextCheckpointY;
 
         if (nextCheckpointAngle > 90 || nextCheckpointAngle < -90) {
             movement.thrust = 0;
-        } else if (nextCheckpointDist < 2000) {
-            movement.thrust = nextCheckpointDist * 100 / 2000;
         } else {
             movement.thrust = 100;
         }
