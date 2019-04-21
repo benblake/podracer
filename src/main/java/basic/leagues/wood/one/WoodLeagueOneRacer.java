@@ -17,6 +17,7 @@ public class WoodLeagueOneRacer implements PodRacer {
             int opponentX,
             int opponentY
     ) {
+        movement.boost = false;
         movement.directionX = nextCheckpointX;
         movement.directionY = nextCheckpointY;
 
